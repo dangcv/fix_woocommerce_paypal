@@ -1,8 +1,4 @@
 <?php
-/**
- * @package Hello_Dolly
- * @version 1.6
- */
 /*
 Plugin Name: Fix problem payment on Woocommerce
 Plugin URI: https://tshirtecommerce.com/
