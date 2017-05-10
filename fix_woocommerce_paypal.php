@@ -25,8 +25,12 @@ function get_cancel_woocommerce_paypal()
 	if( isset($_GET['cancel_wp_id']) )
 	{
 		$cancel_wp_id = $_GET['cancel_wp_id'];
-		wp_redirect(base64_decode($cancel_wp_id));
-		exit;
+		$url = base64_decode($cancel_wp_id);
+		if( strpos($url, site_url()) !== false)
+		{
+			wp_redirect(base64_decode($cancel_wp_id));
+			exit;
+		}
 	}
 }
 
